@@ -34,11 +34,15 @@ export const create = mutation({
 export const get = query({
   args: { paginationOpts: paginationOptsValidator, search: v.optional(v.string()) },
   handler: async (ctx, { search, paginationOpts }) => {
+    
+    
     const user = await ctx.auth.getUserIdentity();
 
     if (!user) {
       throw new ConvexError("Unauthorized");
     }
+
+    console.log("User:", user.organizationId);
 
     const organizationId = (user.organizationId ?? undefined) as
       | string
@@ -151,8 +155,9 @@ export const getById = query({
     const document = await ctx.db.get(id);
 
     if (!document) {
-      throw new ConvexError("Document not found");
+      return null;
     }
+
     return document;
   }
 });

@@ -39,12 +39,18 @@ import {auth} from "@clerk/nextjs/server";
 import { preloadQuery } from "convex/nextjs";
 import { api } from "../../../../convex/_generated/api";
 import { Id } from "@convex/_generated/dataModel";
+import { useRouter } from "next/navigation";
+import { ro } from "date-fns/locale";
+import { redirect } from "next/navigation";
 
 interface DocumentIdPageProps {
     params: Promise<{ documentId: Id<"documents"> }>;
 }
 
 const DocumentIdPage = async ({ params }: DocumentIdPageProps) => {
+
+
+    const router = redirect;
     const { documentId } = await params;
 
     const {getToken} = await auth();
@@ -61,6 +67,11 @@ const DocumentIdPage = async ({ params }: DocumentIdPageProps) => {
         {id: documentId},
         {token}
     );
+
+    if ( preloadedDocument == null ) {
+        router('/');
+
+    }
 
     return (
         <Document preloadedDocument={preloadedDocument} />
