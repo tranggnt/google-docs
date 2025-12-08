@@ -1,6 +1,6 @@
 "use client";
 
-import { LucideIcon, BoldIcon, Undo2Icon, Redo2Icon, PrinterIcon, SpellCheckIcon, ItalicIcon, UnderlineIcon, MessageSquarePlusIcon, ListTodoIcon, RemoveFormattingIcon, HighlighterIcon, Link2Icon, ImageIcon, UploadIcon, Search, SearchIcon, AlignLeftIcon, ListIcon, ListOrderedIcon, MinusIcon, PlusIcon } from "lucide-react";
+import { LucideIcon, BoldIcon, Undo2Icon, Redo2Icon, PrinterIcon, SpellCheckIcon, ItalicIcon, UnderlineIcon, MessageSquarePlusIcon, ListTodoIcon, RemoveFormattingIcon, HighlighterIcon, Link2Icon, ImageIcon, UploadIcon, SearchIcon, AlignLeftIcon, ListIcon, ListOrderedIcon, MinusIcon, PlusIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useEditorStore } from "@/store/use-editor-store";
 import { Separator } from "@radix-ui/react-separator";
