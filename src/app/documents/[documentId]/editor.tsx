@@ -31,6 +31,7 @@ const Editor = ({initialContent}: EditorProps) => {
 
 
     const editor = useEditor({
+        autofocus: true,
         //immediateRender: false,
         content: initialContent || "<p></p>",
         onCreate({ editor }) {
