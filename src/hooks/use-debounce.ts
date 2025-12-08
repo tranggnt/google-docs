@@ -1,5 +1,5 @@
-import { time } from "console";
-import { use, useCallback, useRef } from "react";
+
+import { useCallback, useRef } from "react";
 
 export function useDebounce<
     T extends (...args: Parameters<T>) => ReturnType<T>,>(callback: T, delay: number = 500) {

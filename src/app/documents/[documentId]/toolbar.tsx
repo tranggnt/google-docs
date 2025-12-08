@@ -5,17 +5,17 @@ import { cn } from "@/lib/utils";
 import { useEditorStore } from "@/store/use-editor-store";
 import { Separator } from "@radix-ui/react-separator";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger, DropdownMenuItem } from "@/components/ui/dropdown-menu";
-import { Chevron, Dropdown } from "react-day-picker";
+import { Chevron } from "react-day-picker";
 import { Level } from "@tiptap/extension-heading";
 import { type ColorResult, SketchPicker } from "react-color";
-import Highlight from "@tiptap/extension-highlight";
-import { set } from "date-fns";
+// import Highlight from "@tiptap/extension-highlight";
+// import { set } from "date-fns";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import Image from "@tiptap/extension-image";
+//import Image from "@tiptap/extension-image";
 import { Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
-import { TextAlign } from "@tiptap/extension-text-align";
+//import { TextAlign } from "@tiptap/extension-text-align";
 
 
 const FontSizeButton = () => {

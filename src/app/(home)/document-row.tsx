@@ -3,7 +3,7 @@
 import { SiGoogledocs } from "react-icons/si"
 import { TableCell, TableRow } from "@/components/ui/table";
 import { Doc } from "../../../convex/_generated/dataModel";
-import { Building2Icon, CircleUserIcon, MoreVertical } from "lucide-react";
+import { Building2Icon, CircleUserIcon } from "lucide-react";
 import { format } from "date-fns";
 import { DocumentMenu } from "./document-menu";
 import { useRouter } from "next/navigation";
@@ -16,13 +16,13 @@ export const DocumentRow = ({ document }: DocumentRowProps) => {
 
     const router = useRouter();
 
-    const onNewTabClick = (id: string) => {
-        window.open(`/documents/${id}`, "_blank");
-    }
+    // const onNewTabClick = (id: string) => {
+    //     window.open(`/documents/${id}`, "_blank");
+    // }
 
-    const onRowClick = (id: string) => {
-        router.push(`/documents/${id}`);
-    }
+    // const onRowClick = (id: string) => {
+    //     router.push(`/documents/${id}`);
+    // }
     return (
         <TableRow
         onClick={ () => router.push(`/documents/${document._id}`)}

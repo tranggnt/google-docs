@@ -10,7 +10,7 @@ import {
     MenubarItem,
     MenubarMenu,
     MenubarSeparator,
-    MenubarShortcut,
+    
     MenubarSub,
     MenubarSubContent,
     MenubarSubTrigger,
@@ -18,7 +18,7 @@ import {
 
 } from "@/components/ui/menubar";
 import { BsFilePdf } from "react-icons/bs";
-import { useEditor } from "@tiptap/react";
+//import { useEditor } from "@tiptap/react";
 import { useEditorStore } from "@/store/use-editor-store";
 import { OrganizationSwitcher, UserButton } from "@clerk/nextjs";
 import { Doc } from "@convex/_generated/dataModel";
